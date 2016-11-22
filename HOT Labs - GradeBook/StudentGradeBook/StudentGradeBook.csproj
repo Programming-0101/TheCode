@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleUI\AbortFormInputException.cs" />
     <Compile Include="ConsoleUI\GradebookForm.cs" />
+    <Compile Include="CSVFileIO.cs" />
     <Compile Include="EvaluationComponent.cs" />
     <Compile Include="EvaluationGroup.cs" />
     <Compile Include="Program.cs" />
