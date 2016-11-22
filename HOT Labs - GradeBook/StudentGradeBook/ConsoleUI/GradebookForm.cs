@@ -68,7 +68,7 @@ namespace StudentGradeBook.ConsoleUI
                     var item = PromptForEvaluationComponent(groupWeight);
                     group.AddEvaluationItem(item);
                     groupWeight -= item.Weight;
-                } while (remainingWeight > 0);
+                } while (groupWeight > 0);
                 _Gradebook.AddEvaluationGroup(group);
 
                 remainingWeight -= groupWeight;
@@ -81,7 +81,7 @@ namespace StudentGradeBook.ConsoleUI
             string itemName = Console.ReadLine();
             if (itemName.Equals("x", StringComparison.InvariantCultureIgnoreCase))
                 throw new AbortFormInputException();
-            Console.Write($"\tEnter weight (up to {remainingWeight}): ");
+            Console.Write($"\t\tEnter weight (up to {remainingWeight}): ");
             int itemWeight;
             while (!int.TryParse(Console.ReadLine(), out itemWeight) || itemWeight < 1 || itemWeight > remainingWeight)
             {
