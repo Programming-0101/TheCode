@@ -35,33 +35,10 @@ namespace StudentGradeBook.ConsoleUI
         {
             // Add Evaluation Groups
             int remainingWeight = 100;
-            string groupName = String.Empty;
-            int groupWeight;
-            int? passMark = null;
             do
             {
-                Console.Write("\tEnter a name for the evaluation group (or 'x' to exit form): ");
-                groupName = Console.ReadLine();
-                if (groupName.Equals("x", StringComparison.InvariantCultureIgnoreCase))
-                    throw new AbortFormInputException();
-                Console.Write($"\tEnter a weight for the group (up to {remainingWeight}): ");
-                while (!int.TryParse(Console.ReadLine(), out groupWeight) || groupWeight < 1 || groupWeight > remainingWeight)
-                {
-                    Console.WriteLine("\t\tInvalid group weight");
-                    Console.Write($"\tEnter a weight for the group (up to {remainingWeight}): ");
-                }
-                Console.Write("\tEnter a pass mark for the group (or press [Enter] if the group has no pass mark): ");
-                int temp;
-                if (int.TryParse(Console.ReadLine(), out temp))
-                    passMark = temp;
-
-
-                var group = new EvaluationGroup()
-                {
-                    Name = groupName,
-                    Weight = groupWeight,
-                    PassMark = passMark
-                };
+                EvaluationGroup group = PromptForEvaluationGroup(remainingWeight);
+                int groupWeight = group.Weight;
 
                 do
                 {
@@ -69,15 +46,45 @@ namespace StudentGradeBook.ConsoleUI
                     group.AddEvaluationItem(item);
                     groupWeight -= item.Weight;
                 } while (groupWeight > 0);
-                _Gradebook.AddEvaluationGroup(group);
 
-                remainingWeight -= groupWeight;
+                _Gradebook.AddEvaluationGroup(group);
+                remainingWeight -= group.Weight;
             } while (remainingWeight > 0);
         }
 
-        private static EvaluationComponent PromptForEvaluationComponent(int remainingWeight)
+        private EvaluationGroup PromptForEvaluationGroup(int remainingWeight)
         {
-            Console.Write("\t\tEnter name (or 'x' to exit form): ");
+            int groupWeight;
+            string groupName = String.Empty;
+            Console.Write("\tEnter a name for the evaluation group (or 'x' to exit form): ");
+            groupName = Console.ReadLine();
+            if (groupName.Equals("x", StringComparison.InvariantCultureIgnoreCase))
+                throw new AbortFormInputException();
+            Console.Write($"\tEnter a weight for the group (up to {remainingWeight}): ");
+            while (!int.TryParse(Console.ReadLine(), out groupWeight) || groupWeight < 1 || groupWeight > remainingWeight)
+            {
+                Console.WriteLine("\t\tInvalid group weight");
+                Console.Write($"\tEnter a weight for the group (up to {remainingWeight}): ");
+            }
+            Console.Write("\tEnter a pass mark for the group (or press [Enter] if the group has no pass mark): ");
+            int temp;
+            int? passMark = null;
+            if (int.TryParse(Console.ReadLine(), out temp))
+                passMark = temp;
+
+
+            EvaluationGroup group = new EvaluationGroup()
+            {
+                Name = groupName,
+                Weight = groupWeight,
+                PassMark = passMark
+            };
+            return group;
+        }
+
+        private EvaluationComponent PromptForEvaluationComponent(int remainingWeight)
+        {
+            Console.Write("\t\tEnter item name (or 'x' to exit form): ");
             string itemName = Console.ReadLine();
             if (itemName.Equals("x", StringComparison.InvariantCultureIgnoreCase))
                 throw new AbortFormInputException();

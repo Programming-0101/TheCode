@@ -29,11 +29,13 @@ namespace StudentGradeBook
                 }
                 catch (AbortFormInputException ex)
                 {
-
+                    // no need to do anything - they've just aborted the form they are in
                 }
                 catch (Exception ex)
                 {
-                    
+                    Console.Error.WriteLine(ex.Message);
+                    Console.Write("Press [Enter] to return to the main menu.");
+                    Console.ReadLine();// tossing the input....
                 }
             } while (userInput != "Q");
         }
@@ -48,6 +50,13 @@ namespace StudentGradeBook
                     SaveGrades(gradebook);
                     break;
                 case "2":
+                    Console.Write("Course Number: ");
+                    string courseNumber = Console.ReadLine();
+                    var data = LoadGrades($"{courseNumber}.txt");
+                    GradebookGradeRecordingForm form2 = new GradebookGradeRecordingForm(data);
+                    form2.ShowForm();
+                    if (form2.GradesEntered)
+                        SaveGrades(form2.Gradebook);
                     break;
             }
         }
