@@ -12,6 +12,24 @@ namespace StudentGradeBook
         public string Name { get; set; }
         public int Weight { get; set; }
         public int? PassMark { get; set; }
+        public double MarkToDate
+        {
+            get
+            {
+                double result = 0;
+                foreach (var mark in Items)
+                    result += mark.WeightedMark ?? 0;
+                return result;
+            }
+        }
+        public bool AllItemsMarked
+        {
+            get
+            {
+                // Ah, the beauty of extension methods for collections
+                return Items.All(x => x.WeightedMark.HasValue);
+            }
+        }
         private List<EvaluationComponent> Items { get; set; }
 
         // Constructor
@@ -45,6 +63,23 @@ namespace StudentGradeBook
                 results.Add(item.Name);
 
             return results;
+        }
+
+        public override string ToString()
+        {
+            string text = $"{Name} ({Weight} %";
+            if (PassMark.HasValue)
+                text += $" - {PassMark} % to pass)";
+            else
+                text += ")";
+
+            text += $" -- {MarkToDate} % ";
+            if (AllItemsMarked)
+                text += "FINAL MARK";
+            else
+                text += "Mark-to-date";
+
+            return text;
         }
     }
 }

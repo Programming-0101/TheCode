@@ -17,6 +17,26 @@ namespace StudentGradeBook
 
         public string CourseNumber { get; set; }
         public string CourseName { get; set; }
+        public double MarkToDate
+        {
+            get
+            {
+                double result = 0;
+                foreach (var mark in Groups)
+                    result += mark.MarkToDate;
+                return result;
+            }
+        }
+        public bool AllItemsMarked
+        {
+            get
+            {
+                // Ah, the beauty of extension methods for collections, even arrays
+                return Groups.All(x => x.AllItemsMarked);
+            }
+        }
+
+
         // Hiding the Groups by making them private helps protect the data
         private EvaluationGroup[] Groups { get; set; }
         private int _LogicalSize; // a field to control the logical size of the array

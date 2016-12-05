@@ -43,5 +43,14 @@ namespace StudentGradeBook
                     return null; // not enough data to calculate
             }
         }
+
+        public override string ToString()
+        {
+            var text = $"{Name} (worth {Weight} %)";
+            if (Mark.HasValue)
+                text += $" - {EarnedMark} / {PossibleMarks} => {Mark} %    ({WeightedMark} %)";
+
+            return text;
+        }
     }
 }

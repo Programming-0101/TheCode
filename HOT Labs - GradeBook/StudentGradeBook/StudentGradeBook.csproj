@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsoleUI\AbortFormInputException.cs" />
+    <Compile Include="ConsoleUI\FileDialog.cs" />
     <Compile Include="ConsoleUI\GradebookForm.cs" />
     <Compile Include="ConsoleUI\GradebookGradeRecordingForm.cs" />
     <Compile Include="CSVFileIO.cs" />

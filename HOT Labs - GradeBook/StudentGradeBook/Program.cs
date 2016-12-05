@@ -34,6 +34,7 @@ namespace StudentGradeBook
                 catch (Exception ex)
                 {
                     Console.Error.WriteLine(ex.Message);
+                    Console.Error.WriteLine($"at {ex.TargetSite}");
                     Console.Write("Press [Enter] to return to the main menu.");
                     Console.ReadLine();// tossing the input....
                 }
@@ -50,9 +51,11 @@ namespace StudentGradeBook
                     SaveGrades(gradebook);
                     break;
                 case "2":
-                    Console.Write("Course Number: ");
-                    string courseNumber = Console.ReadLine();
-                    var data = LoadGrades($"{courseNumber}.txt");
+                    //Console.Write("Course Number: ");
+                    //string courseNumber = Console.ReadLine();
+                    //var data = LoadGrades($"{courseNumber}.txt");
+                    string path = FileDialog.GetFilePathFromDirectory("Select a course file: ");
+                    var data = LoadGrades(path);
                     GradebookGradeRecordingForm form2 = new GradebookGradeRecordingForm(data);
                     form2.ShowForm();
                     if (form2.GradesEntered)
@@ -104,6 +107,47 @@ namespace StudentGradeBook
              * ItemName, ItemWeight, PossibleMarks, EarnedMark
              */
             StudentEvaluation gradebook = null;
+            CSVFileIO reader = new CSVFileIO(fileName);
+            Queue<string> lines = new Queue<string>(reader.ReadAllLines());
+
+            // Get the course name/number
+            string[] parts = lines.Dequeue().Split(',');
+            gradebook = new StudentEvaluation()
+            {
+                CourseName = parts[0],
+                CourseNumber = parts[1]
+            };
+            int groupCount = int.Parse(parts[2]);
+            while (groupCount > 0)
+            {
+                // Get the evaluation group
+                parts = lines.Dequeue().Split(',');
+                int temp;
+                var group = new EvaluationGroup()
+                {
+                    Name = parts[0],
+                    Weight = int.Parse(parts[1]),
+                    PassMark = int.TryParse(parts[2], out temp) // does it parse?
+                             ? temp                             // yes, so use it
+                             : (int?)null                       // no, so set to null
+                };
+                int itemCount = int.Parse(parts[3]);
+                while (itemCount > 0)
+                {
+                    // Get the evaluation component
+                    parts = lines.Dequeue().Split(',');
+                    var item = new EvaluationComponent(parts[0], int.Parse(parts[1]));
+                    if (int.TryParse(parts[2], out temp))
+                        item.PossibleMarks = temp;
+                    double dtemp;
+                    if (double.TryParse(parts[3], out dtemp))
+                        item.EarnedMark = dtemp;
+                    group.AddEvaluationItem(item);
+                    itemCount--;
+                }
+                gradebook.AddEvaluationGroup(group);
+                groupCount--;
+            }
 
             return gradebook;
         }
