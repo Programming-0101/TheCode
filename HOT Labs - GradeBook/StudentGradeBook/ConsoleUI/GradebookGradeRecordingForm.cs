@@ -73,7 +73,26 @@ namespace StudentGradeBook.ConsoleUI
             foreach (var groupName in Gradebook.ListEvaluationGroups())
             {
                 var group = Gradebook.GetEvaluationGroup(groupName);
-                Console.WriteLine($"\t{group}");
+                Console.Write($"\t{group}");
+                if (group.HasPassedGroup.HasValue)
+                {
+                    if (group.HasPassedGroup.Value)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine(" - Passed this group!");
+                        Console.ResetColor();
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        string yet = "not *yet* ";
+                        if (group.AllItemsMarked) yet = "NOT ";
+                        Console.WriteLine($" - Has {yet}passed this group!");
+                        Console.ResetColor();
+                    }
+                }
+                else
+                    Console.WriteLine();
                 foreach (var itemName in group.ListGroupComponents())
                 {
                     var item = group.GetEvaluationItem(itemName);

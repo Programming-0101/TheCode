@@ -22,6 +22,19 @@ namespace StudentGradeBook
                 return result;
             }
         }
+        public bool? HasPassedGroup
+        {
+            get
+            {
+                bool? passed = null;
+                if (PassMark.HasValue)
+                    if (MarkToDate >= Weight * (PassMark / 100.0))
+                        passed = true;
+                    else
+                        passed = false;
+                return passed;
+            }
+        }
         public bool AllItemsMarked
         {
             get
@@ -73,7 +86,7 @@ namespace StudentGradeBook
             else
                 text += ")";
 
-            text += $" -- {MarkToDate} % ";
+            text += $" -- {MarkToDate:F1} % ";
             if (AllItemsMarked)
                 text += "FINAL MARK";
             else

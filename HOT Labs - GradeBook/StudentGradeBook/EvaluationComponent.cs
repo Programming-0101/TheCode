@@ -48,7 +48,7 @@ namespace StudentGradeBook
         {
             var text = $"{Name} (worth {Weight} %)";
             if (Mark.HasValue)
-                text += $" - {EarnedMark} / {PossibleMarks} => {Mark} %    ({WeightedMark} %)";
+                text += $" - {EarnedMark} / {PossibleMarks} => {Mark:F1} %    ({WeightedMark:F1} %)";
 
             return text;
         }
