@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Topic")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Programming 0101 OOP Fundamentals Test Suite")]
+[assembly: AssemblyDescription("Per-Topic Unit Tests for use with Programming 0101 OOP Fundamentals")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Topic")]
+[assembly: AssemblyCompany("Dynamic Generation Inc.")]
+[assembly: AssemblyProduct("Programming0101 Topical Unit Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

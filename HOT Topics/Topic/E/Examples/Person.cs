@@ -19,7 +19,11 @@ namespace Topic.E.Examples
             get
             {
                 int currentAge = 0;
+                // straight years calculation
                 currentAge = DateTime.Today.Year - BirthDate.Year;
+                // Check to see if we're on the "early" side of their birthday
+                if (BirthDate > DateTime.Today.AddYears(-currentAge))
+                    currentAge--;
                 return currentAge;
             }
         }
