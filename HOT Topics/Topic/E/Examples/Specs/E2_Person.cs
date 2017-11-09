@@ -1,51 +1,15 @@
 ﻿using Microsoft.CSharp.RuntimeBinder;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Topic.Specs;
 using Xunit;
 
 namespace Topic.E.Examples.Specs
 {
-    public abstract class E1_Calculator : ReflectionBase
+    public abstract class E2_Person : ReflectionBase
     {
-        [Fact]
-        [Trait("New Tests", "Topic E Calculator Example")]
-        public void Should_Add_Two_Numbers()
+        private dynamic New(string first, string last, DateTime dob)
         {
-            // Invoke a static method on a type
-            var sut = Type.GetType(TypeName, true);
-            var actual = sut.GetMethod("Add", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static).Invoke(null, new object[] { 5, 7 });
-            Assert.Equal(12, actual);
-        }
-
-        [Fact]
-        [Trait("New Tests", "Topic E Calculator Example")]
-        public void Should_Multiply_Two_Numbers()
-        {
-            var sut = Type.GetType("Topic.E.Examples.Calculator,Topic.xUnit.Specs", true);
-            var actual = sut.GetMethod("Multiply", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static).Invoke(null, new object[] { 4, 3 });
-            Assert.Equal(12, actual);
-        }
-    }
-    public class E3_Account    {    }
-    public class E4_ElapsedTime { }
-    public class E5_ResolveExpressions { }
-    public class E6_Circle { }
-    public class E7_Square { }
-    public class E8_Fraction { }
-    public class E9_Angle { }
-    public class E10_StockTime { }
-    public class E11_Die { }
-    public class E12_ParkingCounter { }
-    public class E13_QuadraticEquation { }
-    public class E2_Person
-    {
-        private Person New(string first, string last, DateTime dob)
-        {
-            return new Person(first, last, dob);
+            return NewSUT(first, last, dob);
         }
 
         #region From earlier topics
@@ -158,7 +122,7 @@ namespace Topic.E.Examples.Specs
         {
             // Arrange
             var given = DateTime.Today.AddYears(-18).AddDays(1);
-            var expected = DateTime.Today.Year - given.Year - 1;            
+            var expected = DateTime.Today.Year - given.Year - 1;
             var sut = New("John", "Doe", given);
 
             // Act

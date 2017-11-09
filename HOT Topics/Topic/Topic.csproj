@@ -68,7 +68,15 @@
     <Compile Include="E\Examples\Person.cs" />
     <Compile Include="E\Examples\QuadraticEquation.cs" />
     <Compile Include="E\Examples\ResolveExpressions.cs" />
+    <Compile Include="E\Examples\Specs\E1_Calculator.cs" />
     <Compile Include="E\Examples\Specs\E2_Person.cs" />
+    <Compile Include="E\Examples\Specs\E3_Account.cs" />
+    <Compile Include="E\Examples\Specs\E6_Circle.cs" />
+    <Compile Include="E\Examples\Specs\E7_Square.cs" />
+    <Compile Include="E\Examples\Specs\E8_Fraction.cs" />
+    <Compile Include="E\Examples\Specs\E9_Angle.cs" />
+    <Compile Include="E\Practice\Calculator.cs" />
+    <Compile Include="E\Practice\Specs\E1_Calculator.cs" />
     <Compile Include="E\SelfCheck.cs" />
     <Compile Include="ReflectionBase.cs" />
     <Compile Include="E\Examples\Square.cs" />
@@ -77,7 +85,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="D\Practice\" />
-    <Folder Include="E\Practice\" />
     <Folder Include="F\Examples\" />
     <Folder Include="F\Practice\" />
     <Folder Include="G\Examples\" />
