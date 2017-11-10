@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Topic.E.Examples
 {
-    public class Square
+    internal class Square
     {
         public Square(double side)
         {

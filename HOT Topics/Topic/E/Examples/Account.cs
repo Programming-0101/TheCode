@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Topic.E.Examples
 {
-    public class Account
+    internal class Account
     {
         public int AccountNumber { get; private set; }
         public double Balance { get; private set; }

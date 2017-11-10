@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Topic.E.Examples
 {
-    public class ParkingCounter
+    internal class ParkingCounter
     {
         public int ParkingSpots { get; private set; }
 

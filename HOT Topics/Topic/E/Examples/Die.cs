@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Topic.E.Examples
 {
-    public class Die
+    internal class Die
     {
         private static Random rnd = new Random();
 

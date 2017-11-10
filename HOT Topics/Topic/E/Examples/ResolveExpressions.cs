@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Topic.E.Examples
 {
-    public class ResolveExpressions
+    internal class ResolveExpressions
     {
         public static double Sample1
         { get { return 10.0 + 15 / 2 + 4.3; } }

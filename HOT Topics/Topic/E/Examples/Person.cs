@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Topic.E.Examples
 {
-    public class Person
+    internal class Person
     {
         public string FirstName { get; set; }
 
