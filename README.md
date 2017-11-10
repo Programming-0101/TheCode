@@ -3,7 +3,7 @@
 Download Alpha Pre-Release via NuGet:
 
 ```
-Install-Package Programming.HOT.Topics -Version 0.1.0
+Install-Package Programming.HOT.Topics -Version 0.1.1
 ```
 
 To run tests, create classes such as the following:
