@@ -71,7 +71,9 @@
     <Compile Include="E\Examples\ResolveExpressions.cs" />
     <Compile Include="E\Examples\Specs\E1_Calculator.cs" />
     <Compile Include="E\Examples\Specs\E2_Person.cs" />
+    <Compile Include="E\Examples\Specs\E11_Die.cs" />
     <Compile Include="E\Examples\Specs\E3_Account.cs" />
+    <Compile Include="E\Examples\Specs\E4_ElapsedTime.cs" />
     <Compile Include="E\Examples\Specs\E6_Circle.cs" />
     <Compile Include="E\Examples\Specs\E7_Square.cs" />
     <Compile Include="E\Examples\Specs\E8_Fraction.cs" />

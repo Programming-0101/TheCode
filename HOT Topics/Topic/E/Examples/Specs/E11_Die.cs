@@ -9,32 +9,6 @@ using Xunit;
 
 namespace Topic.E.Examples.Specs
 {
-    public abstract class E4_ElapsedTime : ReflectionBase
-    {
-        //Should calculate the hours, minutes and seconds given the total seconds
-        //Should calculate the total seconds given the hours, minutes and seconds
-        private dynamic New(string first, string last, DateTime dob)
-        {
-            return NewSUT(first, last, dob);
-        }
-
-        #region From earlier topics
-        [Theory, Trait("Prior Tests", "Topic E Person Example")]
-        [InlineData("John")]
-        [InlineData("Jane")]
-        public void Should_Get_FirstName(string firstName)
-        {
-            // Arrange
-            var sut = New(firstName, "Doe", new DateTime(1990, 05, 30));
-
-            // Act
-            string actual = sut.FirstName;
-
-            // Assert
-            Assert.Equal(firstName, actual);
-        }
-        #endregion
-    }
     public abstract class E5_ResolveExpressions : ReflectionBase
     {
         //10.0 + 15 / 2 + 4.3
