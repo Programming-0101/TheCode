@@ -18,6 +18,24 @@ namespace Topic.E
 
         protected override string AssemblyName => GetType().Assembly.FullName;
     }
+    public class SelfCheck_E3_Account : Examples.Specs.E3_Account
+    {
+        protected override string FullyQualifiedClassName => typeof(Examples.Account).FullName;
+
+        protected override string AssemblyName => GetType().Assembly.FullName;
+    }
+    public class SelfCheck_E4_ElapsedTime : Examples.Specs.E4_ElapsedTime
+    {
+        protected override string FullyQualifiedClassName => typeof(Examples.ElapsedTime).FullName;
+
+        protected override string AssemblyName => GetType().Assembly.FullName;
+    }
+    public class SelfCheck_E5_ResolveExpressions : Examples.Specs.E5_ResolveExpressions
+    {
+        protected override string FullyQualifiedClassName => typeof(Examples.ResolveExpressions).FullName;
+
+        protected override string AssemblyName => GetType().Assembly.FullName;
+    }
     public class SelfCheck_E6_Circle : Examples.Specs.E6_Circle
     {
         protected override string FullyQualifiedClassName => typeof(Examples.Circle).FullName;
@@ -36,10 +54,33 @@ namespace Topic.E
 
         protected override string AssemblyName => GetType().Assembly.FullName;
     }
-    //E9_Angle
     public class SelfCheck_E9_Angle : Examples.Specs.E9_Angle
     {
         protected override string FullyQualifiedClassName => typeof(Examples.Angle).FullName;
+
+        protected override string AssemblyName => GetType().Assembly.FullName;
+    }
+    public class SelfCheck_E10_StockItem : Examples.Specs.E10_StockItem
+    {
+        protected override string FullyQualifiedClassName => typeof(Examples.StockItem).FullName;
+
+        protected override string AssemblyName => GetType().Assembly.FullName;
+    }
+    public class SelfCheck_E11_Die : Examples.Specs.E11_Die
+    {
+        protected override string FullyQualifiedClassName => typeof(Examples.Die).FullName;
+
+        protected override string AssemblyName => GetType().Assembly.FullName;
+    }
+    public class SelfCheck_E12_ParkingCounter : Examples.Specs.E12_ParkingCounter
+    {
+        protected override string FullyQualifiedClassName => typeof(Examples.ParkingCounter).FullName;
+
+        protected override string AssemblyName => GetType().Assembly.FullName;
+    }
+    public class SelfCheck_E13_QuadraticEquation : Examples.Specs.E13_QuadraticEquation
+    {
+        protected override string FullyQualifiedClassName => typeof(Examples.QuadraticEquation).FullName;
 
         protected override string AssemblyName => GetType().Assembly.FullName;
     }

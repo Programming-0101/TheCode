@@ -7,7 +7,7 @@ namespace Topic.E.Examples
     {
         public int AccountNumber { get; private set; }
         public double Balance { get; private set; }
-        public double OverdraftLimit { get; private set; }
+        public double OverdraftLimit { get; set; }
         public string AccountType { get; private set; }
         public string BankName { get; private set; }
         public int BranchNumber { get; private set; }
