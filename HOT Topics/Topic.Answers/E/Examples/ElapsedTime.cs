@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Topic.E.Examples
 {
-    internal class ElapsedTime
+    public class ElapsedTime
     {
         public ElapsedTime(int hours, int minutes, int seconds)
         {

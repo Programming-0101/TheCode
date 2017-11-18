@@ -6,7 +6,7 @@ using Xunit;
 
 namespace Topic.E.Examples.Specs
 {
-    public abstract class E8_Fraction : ReflectionBase
+    public abstract class E8_Fraction<TSUT> : ReflectionBase<TSUT>
     {
         private dynamic New(int numerator, int denominator)
         {

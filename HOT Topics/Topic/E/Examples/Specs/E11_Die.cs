@@ -9,7 +9,7 @@ using Xunit;
 
 namespace Topic.E.Examples.Specs
 {
-    public abstract class E5_ResolveExpressions : ReflectionBase
+    public abstract class E5_ResolveExpressions<TSUT> : ReflectionBase<TSUT>
     {
         //10.0 + 15 / 2 + 4.3
         //8 / 5 + 1.25
@@ -43,7 +43,7 @@ namespace Topic.E.Examples.Specs
         }
         #endregion
     }
-    public abstract class E10_StockItem : ReflectionBase
+    public abstract class E10_StockItem<TSUT> : ReflectionBase<TSUT>
     {
         //Should get and set the name, cost and profit margin of the stock item
         //Should represent the profit margin as a percent; a value of 45 means 45%
@@ -71,7 +71,7 @@ namespace Topic.E.Examples.Specs
         }
         #endregion
     }
-    public abstract class E11_Die : ReflectionBase
+    public abstract class E11_Die<TSUT> : ReflectionBase<TSUT>
     {
         // TODO: Need to figure out a way to test "random numbers"....
         private dynamic New(int numerator, int denominator)
@@ -97,7 +97,7 @@ namespace Topic.E.Examples.Specs
         //Should generate a random value from 1 to 6, when initially created and when re-rolled
         //Should get the face value of the die
     }
-    public abstract class E12_ParkingCounter : ReflectionBase
+    public abstract class E12_ParkingCounter<TSUT> : ReflectionBase<TSUT>
     {
         //Should track vehicles entering
         //Should track vehicles leaving
@@ -127,7 +127,7 @@ namespace Topic.E.Examples.Specs
         }
         #endregion
     }
-    public abstract class E13_QuadraticEquation : ReflectionBase
+    public abstract class E13_QuadraticEquation<TSUT> : ReflectionBase<TSUT>
     {
         //Should get the lower root, using the quadratic formula
         //x = (-b -√(b^2-4ac))/2a$

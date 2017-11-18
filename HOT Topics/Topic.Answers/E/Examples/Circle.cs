@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Topic.E.Examples
 {
-    internal class Circle
+    public class Circle
     {
         public Circle(double diameter)
         {

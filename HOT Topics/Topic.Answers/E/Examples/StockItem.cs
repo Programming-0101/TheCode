@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Topic.E.Examples
 {
-    internal class StockItem
+    public class StockItem
     {
         public double Cost { get; set; }
 

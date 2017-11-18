@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Topic.E.Examples
 {
-    internal class Fraction
+    public class Fraction
     {
         public int Numerator { get; private set; }
 

@@ -5,7 +5,7 @@ using Xunit;
 
 namespace Topic.E.Examples.Specs
 {
-    public abstract class E2_Person : ReflectionBase
+    public abstract class E2_Person<TSUT> : ReflectionBase<TSUT>
     {
         private dynamic New(string first, string last, DateTime dob)
         {

@@ -6,7 +6,7 @@ using Xunit;
 
 namespace Topic.E.Examples.Specs
 {
-    public abstract class E4_ElapsedTime : ReflectionBase
+    public abstract class E4_ElapsedTime<TSUT> : ReflectionBase<TSUT>
     {
         private dynamic New(int hours, int minutes, int seconds)
         {

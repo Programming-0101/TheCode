@@ -6,7 +6,7 @@ using Xunit;
 
 namespace Topic.E.Examples.Specs
 {
-    public abstract class E3_Account : ReflectionBase
+    public abstract class E3_Account<TSUT> : ReflectionBase<TSUT>
     {
         private dynamic New(string bankName, int branchNumber, int institutionNumber, int accountNumber, double balance, double overdraftLimit, string accountType)
         {

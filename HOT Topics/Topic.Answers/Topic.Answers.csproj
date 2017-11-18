@@ -6,16 +6,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{50DAB5B2-C562-42F5-91A7-0DD47C7F3DAC}</ProjectGuid>
+    <ProjectGuid>{DC8843B1-758A-4656-AD86-D2D2E3087E6C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Topic</RootNamespace>
-    <AssemblyName>Topic.xUnit.Specs</AssemblyName>
+    <AssemblyName>Topic.Answers</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -58,19 +57,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="D\Examples\Person.cs" />
-    <Compile Include="E\Examples\Specs\E1_Calculator.cs" />
-    <Compile Include="E\Examples\Specs\E2_Person.cs" />
-    <Compile Include="E\Examples\Specs\E11_Die.cs" />
-    <Compile Include="E\Examples\Specs\E3_Account.cs" />
-    <Compile Include="E\Examples\Specs\E4_ElapsedTime.cs" />
-    <Compile Include="E\Examples\Specs\E6_Circle.cs" />
-    <Compile Include="E\Examples\Specs\E7_Square.cs" />
-    <Compile Include="E\Examples\Specs\E8_Fraction.cs" />
-    <Compile Include="E\Examples\Specs\E9_Angle.cs" />
+    <Compile Include="E\Examples\Account.cs" />
+    <Compile Include="E\Examples\Angle.cs" />
+    <Compile Include="E\Examples\Calculator.cs" />
+    <Compile Include="E\Examples\Circle.cs" />
+    <Compile Include="E\Examples\Die.cs" />
+    <Compile Include="E\Examples\ElapsedTime.cs" />
+    <Compile Include="E\Examples\Fraction.cs" />
+    <Compile Include="E\Examples\ParkingCounter.cs" />
+    <Compile Include="E\Examples\Person.cs" />
+    <Compile Include="E\Examples\QuadraticEquation.cs" />
+    <Compile Include="E\Examples\ResolveExpressions.cs" />
+    <Compile Include="E\Examples\Square.cs" />
+    <Compile Include="E\Examples\StockItem.cs" />
     <Compile Include="E\Practice\Calculator.cs" />
     <Compile Include="E\Practice\Specs\E1_Calculator.cs" />
-    <Compile Include="ReflectionBase.cs" />
+    <Compile Include="E\_SelfCheck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Topic\Topic.csproj">
+      <Project>{50dab5b2-c562-42f5-91a7-0dd47c7f3dac}</Project>
+      <Name>Topic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\xunit.analyzers.0.7.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="D\Practice\" />
@@ -84,12 +99,6 @@
     <Folder Include="I\Practice\" />
     <Folder Include="J\Examples\" />
     <Folder Include="J\Practice\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Analyzer Include="..\packages\xunit.analyzers.0.7.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />

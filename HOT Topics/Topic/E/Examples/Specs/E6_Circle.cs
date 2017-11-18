@@ -5,7 +5,7 @@ using Xunit;
 
 namespace Topic.E.Examples.Specs
 {
-    public abstract class E6_Circle : ReflectionBase
+    public abstract class E6_Circle<TSUT> : ReflectionBase<TSUT>
     {
         private dynamic New(double diameter)
         {

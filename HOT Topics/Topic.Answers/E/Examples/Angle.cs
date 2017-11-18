@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Topic.E.Examples
 {
-    internal class Angle
+    public class Angle
     {
         public Angle(double degrees)
         {

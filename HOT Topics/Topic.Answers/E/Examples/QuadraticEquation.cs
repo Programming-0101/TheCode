@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Topic.E.Examples
 {
-    internal class QuadraticEquation
+    public class QuadraticEquation
     {
         private int a;
         private int b;

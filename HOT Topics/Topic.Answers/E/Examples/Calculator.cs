@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Topic.E.Examples
 {
-    internal class Calculator
+    public class Calculator
     {
         public static int Add(int firstNumber, int secondNumber)
         {

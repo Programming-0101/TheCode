@@ -5,11 +5,11 @@ using Xunit;
 
 namespace Topic.E.Examples.Specs
 {
-    public abstract class E9_Angle : ReflectionBase
+    public abstract class E9_Angle<TSUT> : ReflectionBase<TSUT>
     {
-        private Angle New(double deg)
+        private dynamic New(double deg)
         {
-            return new Angle(deg);
+            return NewSUT(deg);
         }
 
         //Should get and set the angle's value(in degrees)

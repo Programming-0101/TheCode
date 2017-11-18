@@ -5,7 +5,7 @@ using Xunit;
 
 namespace Topic.E.Examples.Specs
 {
-    public abstract class E7_Square : ReflectionBase
+    public abstract class E7_Square<TSUT> : ReflectionBase<TSUT>
     {
         private dynamic New(double side)
         {
