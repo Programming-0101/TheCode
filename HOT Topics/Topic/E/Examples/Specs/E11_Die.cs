@@ -27,7 +27,7 @@ namespace Topic.E.Examples.Specs
         }
 
         #region From earlier topics
-        [Theory, Trait("Prior Tests", "Topic E Person Example")]
+        [Theory, Trait("Prior Tests", "Person - Example")]
         [InlineData("John")]
         [InlineData("Jane")]
         public void Should_Get_FirstName(string firstName)
@@ -55,7 +55,7 @@ namespace Topic.E.Examples.Specs
         }
 
         #region From earlier topics
-        [Theory, Trait("Prior Tests", "Topic E Person Example")]
+        [Theory, Trait("Prior Tests", "Person - Example")]
         [InlineData("John")]
         [InlineData("Jane")]
         public void Should_Get_FirstName(string firstName)
@@ -79,7 +79,7 @@ namespace Topic.E.Examples.Specs
             return NewSUT(numerator, denominator);
         }
         //Should get the numerator/denominator
-        [Fact, Trait("New Tests", "Topic E Die Example")]
+        [Fact, Trait("Topic E Tests", "Die - Example")]
         public void Should_Get_Numerator()
         {
             throw new NotImplementedException();
@@ -111,7 +111,7 @@ namespace Topic.E.Examples.Specs
         }
 
         #region From earlier topics
-        [Theory, Trait("Prior Tests", "Topic E Person Example")]
+        [Theory, Trait("Prior Tests", "Person - Example")]
         [InlineData("John")]
         [InlineData("Jane")]
         public void Should_Get_FirstName(string firstName)
@@ -143,7 +143,7 @@ namespace Topic.E.Examples.Specs
         }
 
         #region From earlier topics
-        [Theory, Trait("Prior Tests", "Topic E Person Example")]
+        [Theory, Trait("Prior Tests", "Person - Example")]
         [InlineData("John")]
         [InlineData("Jane")]
         public void Should_Get_FirstName(string firstName)

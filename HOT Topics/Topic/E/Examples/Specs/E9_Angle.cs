@@ -13,7 +13,7 @@ namespace Topic.E.Examples.Specs
         }
 
         //Should get and set the angle's value(in degrees)
-        [Fact, Trait("New Tests", "Topic E Angle Example")]
+        [Fact, Trait("Topic E Tests", "Angle - Example")]
         public void Should_Get_Numerator()
         {
             // Arrange
@@ -26,7 +26,7 @@ namespace Topic.E.Examples.Specs
             // Assert
             Assert.Equal(expected, actual);
         }
-        [Fact, Trait("New Tests", "Topic E Angle Example")]
+        [Fact, Trait("Topic E Tests", "Angle - Example")]
         public void Should_Set_Numerator()
         {
             // Arrange
@@ -42,7 +42,7 @@ namespace Topic.E.Examples.Specs
         }
         //Should calculate the equivalent angle in Radians and Grads, using the following formulas:
         //Radians = Degrees* (π / 180)
-        [Fact, Trait("New Tests", "Topic E Angle Example")]
+        [Fact, Trait("Topic E Tests", "Angle - Example")]
         public void Should_Get_Radians()
         {
             // Arrange
@@ -56,7 +56,7 @@ namespace Topic.E.Examples.Specs
             Assert.Equal(expected, actual);
         }
         //Grads = Radians* (200 / π)
-        [Fact, Trait("New Tests", "Topic E Angle Example")]
+        [Fact, Trait("Topic E Tests", "Angle - Example")]
         public void Should_Get_Grads()
         {
             // Arrange
@@ -71,7 +71,7 @@ namespace Topic.E.Examples.Specs
         }
         //Should override the ToString() method to return the angle in degrees, in the following format:
         //The Unicode character for the degrees symbol is '\u00B0'
-        [Fact, Trait("New Tests", "Topic E Angle Example")]
+        [Fact, Trait("Topic E Tests", "Angle - Example")]
         public void Should_Override_ToString()
         {
             // Arrange

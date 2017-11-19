@@ -19,7 +19,7 @@ namespace Topic.E.Examples.Specs
         }
 
         #region Construction Tests
-        [Fact, Trait("New Tests", "Topic E ElapsedTime Example")]
+        [Fact, Trait("Topic E Tests", "ElapsedTime - Example")]
         public void Should_Construct_From_Hours_Minutes_Seconds_And_Get_Same()
         {
             // Arrange
@@ -36,7 +36,7 @@ namespace Topic.E.Examples.Specs
             Assert.True(expectedSeconds.Equals(sut.Seconds), $"Expected the seconds to be {expectedSeconds} but got {sut.Seconds}");
         }
 
-        [Fact, Trait("New Tests", "Topic E ElapsedTime Example")]
+        [Fact, Trait("Topic E Tests", "ElapsedTime - Example")]
         public void Should_Construct_From_TotalSeconds()
         {
             // Arrange
@@ -54,7 +54,7 @@ namespace Topic.E.Examples.Specs
         #endregion
 
         #region Conversion Tests
-        [Fact, Trait("New Tests", "Topic E ElapsedTime Example")]
+        [Fact, Trait("Topic E Tests", "ElapsedTime - Example")]
         public void Should_Get_TotalSeconds_From_Hours_Minutes_Seconds()
         {
             // Arrange
@@ -70,7 +70,7 @@ namespace Topic.E.Examples.Specs
             Assert.True(expectedTotalSeconds.Equals(sut.TotalSeconds), $"Expected the Total Seconds to be {expectedTotalSeconds} but got {sut.TotalSeconds}");
         }
 
-        [Fact, Trait("New Tests", "Topic E ElapsedTime Example")]
+        [Fact, Trait("Topic E Tests", "ElapsedTime - Example")]
         public void Should_Get_Hours_Portion_From_TotalSeconds()
         {
             // Arrange
@@ -86,7 +86,7 @@ namespace Topic.E.Examples.Specs
             Assert.True(expectedHours.Equals(sut.Hours), $"Expected the hours to be {expectedHours} but got {sut.Hours}");
         }
 
-        [Fact, Trait("New Tests", "Topic E ElapsedTime Example")]
+        [Fact, Trait("Topic E Tests", "ElapsedTime - Example")]
         public void Should_Get_Minutes_Portion_From_TotalSeconds()
         {
             // Arrange
@@ -102,7 +102,7 @@ namespace Topic.E.Examples.Specs
             Assert.True(expectedMinutes.Equals(sut.Minutes), $"Expected the minutes to be {expectedMinutes} but got {sut.Minutes}");
         }
 
-        [Fact, Trait("New Tests", "Topic E ElapsedTime Example")]
+        [Fact, Trait("Topic E Tests", "ElapsedTime - Example")]
         public void Should_Get_Seconds_Portion_From_TotalSeconds()
         {
             // Arrange
@@ -120,7 +120,7 @@ namespace Topic.E.Examples.Specs
         #endregion
 
         #region Setters
-        [Fact, Trait("New Tests", "Topic E Elapsed Example")]
+        [Fact, Trait("Topic E Tests", "Elapsed - Example")]
         public void Should_Not_Set_Hours()
         {
             // Arrange
@@ -132,7 +132,7 @@ namespace Topic.E.Examples.Specs
             // Assert
             Assert.True(ex.Message.Contains("set accessor is inaccessible"), "Expected Hours setter to be private");
         }
-        [Fact, Trait("New Tests", "Topic E Elapsed Example")]
+        [Fact, Trait("Topic E Tests", "Elapsed - Example")]
         public void Should_Not_Set_Minutes()
         {
             // Arrange
@@ -144,7 +144,7 @@ namespace Topic.E.Examples.Specs
             // Assert
             Assert.True(ex.Message.Contains("set accessor is inaccessible"), "Expected Minutes setter to be private");
         }
-        [Fact, Trait("New Tests", "Topic E Elapsed Example")]
+        [Fact, Trait("Topic E Tests", "Elapsed - Example")]
         public void Should_Not_Set_Seconds()
         {
             // Arrange
@@ -156,7 +156,7 @@ namespace Topic.E.Examples.Specs
             // Assert
             Assert.True(ex.Message.Contains("set accessor is inaccessible"), "Expected Seconds setter to be private");
         }
-        [Fact, Trait("New Tests", "Topic E Elapsed Example")]
+        [Fact, Trait("Topic E Tests", "Elapsed - Example")]
         public void Should_Not_Set_TotalSeconds()
         {
             // Arrange

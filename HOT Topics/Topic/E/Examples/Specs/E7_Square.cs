@@ -12,7 +12,7 @@ namespace Topic.E.Examples.Specs
             return NewSUT(side);
         }
         //Should get and set the length of the side of the square
-        [Fact, Trait("New Tests", "Topic E Square Example")]
+        [Fact, Trait("Topic E Tests", "Square - Example")]
         public void Should_Get_Diameter()
         {
             // Arrange
@@ -25,7 +25,7 @@ namespace Topic.E.Examples.Specs
             // Assert
             Assert.Equal(expected, actual);
         }
-        [Fact, Trait("New Tests", "Topic E Square Example")]
+        [Fact, Trait("Topic E Tests", "Square - Example")]
         public void Should_Set_Diameter()
         {
             // Arrange
@@ -40,7 +40,7 @@ namespace Topic.E.Examples.Specs
             Assert.Equal(expected, actual);
         }
         //Should calculate the area and perimeter
-        [Fact, Trait("New Tests", "Topic E Square Example")]
+        [Fact, Trait("Topic E Tests", "Square - Example")]
         public void Should_Get_Area()
         {
             // Arrange
@@ -53,7 +53,7 @@ namespace Topic.E.Examples.Specs
             // Assert
             Assert.Equal(expected, actual);
         }
-        [Fact, Trait("New Tests", "Topic E Square Example")]
+        [Fact, Trait("Topic E Tests", "Square - Example")]
         public void Should_Get_Perimeter()
         {
             // Arrange

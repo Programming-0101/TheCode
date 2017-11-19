@@ -5,90 +5,10 @@ using Xunit;
 
 namespace Topic.E.Examples.Specs
 {
-    public abstract class E2_Person<TSUT> : ReflectionBase<TSUT>
+    public abstract class E2_Person<TSUT> : D.Practice.Specs.D1_Person<TSUT>
     {
-        private dynamic New(string first, string last, DateTime dob)
-        {
-            return NewSUT(first, last, dob);
-        }
 
-        #region From earlier topics
-        [Theory, Trait("Prior Tests", "Topic E Person Example")]
-        [InlineData("John")]
-        [InlineData("Jane")]
-        public void Should_Get_FirstName(string firstName)
-        {
-            // Arrange
-            var sut = New(firstName, "Doe", new DateTime(1990, 05, 30));
-
-            // Act
-            string actual = sut.FirstName;
-
-            // Assert
-            Assert.Equal(firstName, actual);
-        }
-
-        [Fact, Trait("Prior Tests", "Topic E Person Example")]
-        public void Should_Set_FirstName()
-        {
-            // Arrange
-            var expected = "Sam";
-            var sut = New("John", "Doe", new DateTime(1990, 05, 30));
-
-            // Act
-            sut.FirstName = expected;
-
-            // Assert
-            string actual = sut.FirstName;
-            Assert.Equal(expected, actual);
-        }
-
-        [Theory, Trait("Prior Tests", "Topic E Person Example")]
-        [InlineData("Doe")]
-        [InlineData("Deer")]
-        public void Should_Get_LastName(string lastName)
-        {
-            // Arrange
-            var sut = New("John", lastName, new DateTime(1990, 05, 30));
-
-            // Act
-            string actual = sut.LastName;
-
-            // Assert
-            Assert.Equal(lastName, actual);
-        }
-
-        [Fact, Trait("Prior Tests", "Topic E Person Example")]
-        public void Should_Set_LastName()
-        {
-            // Arrange
-            var expected = "Gilford";
-            var sut = New("John", "Doe", new DateTime(1990, 05, 30));
-
-            // Act
-            sut.LastName = expected;
-
-            // Assert
-            string actual = sut.LastName;
-            Assert.Equal(expected, actual);
-        }
-
-        [Fact, Trait("Prior Tests", "Topic E Person Example")]
-        public void Should_Override_ToString()
-        {
-            // Arrange
-            var expected = "John Van Gohe";
-            var sut = New("John", "Van Gohe", new DateTime(1990, 05, 30));
-
-            // Act
-            string actual = sut.ToString();
-
-            // Assert
-            Assert.Equal(expected, actual);
-        }
-        #endregion
-
-        [Fact, Trait("New Tests", "Topic E Person Example")]
+        [Fact, Trait("Topic E Tests", "Person - Example")]
         public void Should_Get_BirthDate()
         {
             // Arrange
@@ -102,7 +22,7 @@ namespace Topic.E.Examples.Specs
             Assert.Equal(expected, actual);
         }
 
-        [Fact, Trait("New Tests", "Topic E Person Example")]
+        [Fact, Trait("Topic E Tests", "Person - Example")]
         public void Should_Not_Set_BirthDate()
         {
             // Arrange
@@ -117,7 +37,7 @@ namespace Topic.E.Examples.Specs
             Assert.True(ex.Message.Contains("set accessor is inaccessible"), "Expected BirthDate setter to be private");
         }
 
-        [Fact, Trait("New Tests", "Topic E Person Example")]
+        [Fact, Trait("Topic E Tests", "Person - Example")]
         public void Should_Get_Age()
         {
             // Arrange
@@ -132,7 +52,7 @@ namespace Topic.E.Examples.Specs
             Assert.Equal(expected, actual);
         }
 
-        [Fact, Trait("New Tests", "Topic E Person Example")]
+        [Fact, Trait("Topic E Tests", "Person - Example")]
         public void Should_Get_Initials()
         {
             // Arrange

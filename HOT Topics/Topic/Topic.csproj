@@ -57,7 +57,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="D\Examples\Person.cs" />
+    <Compile Include="D\Examples\Specs\D1_Person.cs" />
+    <Compile Include="D\Practice\Specs\D1_Person.cs" />
     <Compile Include="E\Examples\Specs\E1_Calculator.cs" />
     <Compile Include="E\Examples\Specs\E2_Person.cs" />
     <Compile Include="E\Examples\Specs\E11_Die.cs" />
@@ -71,19 +72,19 @@
     <Compile Include="E\Practice\Specs\E1_Calculator.cs" />
     <Compile Include="ReflectionBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReflectionBaseSelfCheck.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="D\Practice\" />
-    <Folder Include="F\Examples\" />
-    <Folder Include="F\Practice\" />
-    <Folder Include="G\Examples\" />
-    <Folder Include="G\Practice\" />
-    <Folder Include="H\Examples\" />
-    <Folder Include="H\Practice\" />
-    <Folder Include="I\Examples\" />
-    <Folder Include="I\Practice\" />
-    <Folder Include="J\Examples\" />
-    <Folder Include="J\Practice\" />
+    <Folder Include="F\Examples\Specs\" />
+    <Folder Include="F\Practice\Specs\" />
+    <Folder Include="G\Examples\Specs\" />
+    <Folder Include="G\Practice\Specs\" />
+    <Folder Include="H\Examples\Specs\" />
+    <Folder Include="H\Practice\Specs\" />
+    <Folder Include="I\Examples\Specs\" />
+    <Folder Include="I\Practice\Specs\" />
+    <Folder Include="J\Examples\Specs\" />
+    <Folder Include="J\Practice\Specs\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

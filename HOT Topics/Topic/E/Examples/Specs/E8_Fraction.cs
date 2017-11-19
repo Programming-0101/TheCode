@@ -14,7 +14,7 @@ namespace Topic.E.Examples.Specs
         }
         #region Prior Tests
         //Should get the numerator/denominator
-        [Fact, Trait("Prior Tests", "Topic E Fraction Example")]
+        [Fact, Trait("Prior Tests", "Fraction - Example")]
         public void Should_Get_Numerator()
         {
             // Arrange
@@ -27,7 +27,7 @@ namespace Topic.E.Examples.Specs
             // Assert
             Assert.Equal(expected, actual);
         }
-        [Fact, Trait("Prior Tests", "Topic E Fraction Example")]
+        [Fact, Trait("Prior Tests", "Fraction - Example")]
         public void Should_Get_Denominator()
         {
             // Arrange
@@ -40,7 +40,7 @@ namespace Topic.E.Examples.Specs
             // Assert
             Assert.Equal(expected, actual);
         }
-        [Fact, Trait("Prior Tests", "Topic E Fraction Example")]
+        [Fact, Trait("Prior Tests", "Fraction - Example")]
         public void Should_Not_Set_Numerator()
         {
             // Arrange
@@ -54,7 +54,7 @@ namespace Topic.E.Examples.Specs
             var ex = Assert.Throws<RuntimeBinderException>(() => sut.Numerator = 12);
             Assert.True(ex.Message.Contains("set accessor is inaccessible"), "Expected numerator setter to be private");
         }
-        [Fact, Trait("Prior Tests", "Topic E Fraction Example")]
+        [Fact, Trait("Prior Tests", "Fraction - Example")]
         public void Should_Not_Set_Denominator()
         {
             // Arrange
@@ -71,7 +71,7 @@ namespace Topic.E.Examples.Specs
         #endregion
 
         //Should get the string representation of the fraction, as “numerator/denominator”
-        [Fact, Trait("New Tests", "Topic E Fraction Example")]
+        [Fact, Trait("Topic E Tests", "Fraction - Example")]
         public void Should_Get_Fraction_As_String()
         {
             // Arrange
@@ -85,7 +85,7 @@ namespace Topic.E.Examples.Specs
             Assert.Equal(expected, actual);
         }
         //Should get the numeric value of the fraction(as a real number)
-        [Fact, Trait("New Tests", "Topic E Fraction Example")]
+        [Fact, Trait("Topic E Tests", "Fraction - Example")]
         public void Should_Get_Double_Value()
         {
             // Arrange
@@ -99,7 +99,7 @@ namespace Topic.E.Examples.Specs
             Assert.Equal(expected, actual);
         }
         //Should get the reciprocal of the fraction
-        [Fact, Trait("New Tests", "Topic E Fraction Example")]
+        [Fact, Trait("Topic E Tests", "Fraction - Example")]
         public void Should_Get_Reciprocal()
         {
             // Arrange

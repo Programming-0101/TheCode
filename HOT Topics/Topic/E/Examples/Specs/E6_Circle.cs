@@ -12,7 +12,7 @@ namespace Topic.E.Examples.Specs
             return NewSUT(diameter);
         }
         //Should get and set the diameter
-        [Fact, Trait("New Tests", "Topic E Circle Example")]
+        [Fact, Trait("Topic E Tests", "Circle - Example")]
         public void Should_Get_Diameter()
         {
             // Arrange
@@ -26,7 +26,7 @@ namespace Topic.E.Examples.Specs
             Assert.Equal(expected, actual);
         }
 
-        [Fact, Trait("New Tests", "Topic E Circle Example")]
+        [Fact, Trait("Topic E Tests", "Circle - Example")]
         public void Should_Set_Diameter()
         {
             // Arrange
@@ -42,7 +42,7 @@ namespace Topic.E.Examples.Specs
         }
 
         //Should calculate the area, radius, and circumference
-        [Fact, Trait("New Tests", "Topic E Circle Example")]
+        [Fact, Trait("Topic E Tests", "Circle - Example")]
         public void Should_Get_Circumference()
         {
             // Arrange
@@ -56,7 +56,7 @@ namespace Topic.E.Examples.Specs
             Assert.Equal(expected, actual);
         }
 
-        [Fact, Trait("New Tests", "Topic E Circle Example")]
+        [Fact, Trait("Topic E Tests", "Circle - Example")]
         public void Should_Get_Area()
         {
             // Arrange
@@ -70,7 +70,7 @@ namespace Topic.E.Examples.Specs
             Assert.Equal(expected, actual);
         }
 
-        [Fact, Trait("New Tests", "Topic E Circle Example")]
+        [Fact, Trait("Topic E Tests", "Circle - Example")]
         public void Should_Get_Radius()
         {
             // Arrange
