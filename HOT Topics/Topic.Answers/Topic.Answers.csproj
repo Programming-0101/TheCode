@@ -109,7 +109,20 @@
     <Compile Include="H\Examples\Rating.cs" />
     <Compile Include="J\Examples\Aggregator.cs" />
     <Compile Include="K\Examples\ClassList.cs" />
+    <Compile Include="O\CSVFileIO.cs" />
+    <Compile Include="O\Examples\BookFileAdapter.cs" />
+    <Compile Include="O\Examples\PhoneNumberFileAdapter.cs" />
+    <Compile Include="O\Examples\SafetyDepositBoxFileAdapter.cs" />
+    <Compile Include="O\Examples\StudentFileAdapter.cs" />
+    <Compile Include="O\FileFormat.cs" />
+    <Compile Include="O\XMLFileIO`1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="P\CSVFileIO.cs" />
+    <Compile Include="P\Examples\BookFileAdapter.cs" />
+    <Compile Include="P\Examples\DemoBookFileAdapter.cs" />
+    <Compile Include="P\Examples\DemoTestingForExceptions.cs" />
+    <Compile Include="P\FileFormat.cs" />
+    <Compile Include="P\XMLFileIO`1.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Topic\Topic.csproj">
@@ -131,6 +144,7 @@
     <Folder Include="I\Practice\" />
     <Folder Include="J\Practice\" />
     <Folder Include="K\Practice\" />
+    <Folder Include="O\Practice\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
