@@ -12,9 +12,9 @@ namespace Topic.I.Examples
         public ProperFraction(int numerator, int denominator)
         {
             if (denominator == 0)
-                throw new System.Exception("zero denominator fractions are undefined");
+                throw new Exception("zero denominator fractions are undefined");
             if (Math.Abs(numerator) >= Math.Abs(denominator))
-                throw new System.Exception("Proper fractions must have a numerator that is less than the denominator");
+                throw new Exception("Proper fractions must have a numerator that is less than the denominator");
 
             if (denominator < 0)
             {
@@ -49,9 +49,9 @@ namespace Topic.I.Examples
         public ImproperFraction(int numerator, int denominator)
         {
             if (denominator == 0)
-                throw new System.Exception("zero denominator fractions are undefined");
+                throw new Exception("zero denominator fractions are undefined");
             if (Math.Abs(numerator) < Math.Abs(denominator))
-                throw new System.Exception("Improper fractions must have a numerator that is greater than or equal to the denominator");
+                throw new Exception("Improper fractions must have a numerator that is greater than or equal to the denominator");
 
             if (denominator < 0)
             {
@@ -88,9 +88,9 @@ namespace Topic.I.Examples
         public MixedNumber(int wholeNumber, ProperFraction fraction)
         {
             if (wholeNumber == 0)
-                throw new System.Exception("wholeNumber portion cannot be zero for a Mixed Number");
+                throw new Exception("wholeNumber portion cannot be zero for a Mixed Number");
             if (fraction == null)
-                throw new System.Exception("MixedNumbers must have a fractional portion");
+                throw new Exception("MixedNumbers must have a fractional portion");
             if (fraction.Numerator < 0)
             {
                 fraction = new ProperFraction(-fraction.Numerator, fraction.Denominator);
