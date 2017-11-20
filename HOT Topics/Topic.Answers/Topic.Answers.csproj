@@ -107,6 +107,13 @@
     <Compile Include="G\Examples\Student.cs" />
     <Compile Include="H\Examples\LetterGrade.cs" />
     <Compile Include="H\Examples\Rating.cs" />
+    <Compile Include="I\Examples\Account.cs" />
+    <Compile Include="I\Examples\Address.cs" />
+    <Compile Include="I\Examples\Fractions.cs" />
+    <Compile Include="I\Examples\Student.cs" />
+    <Compile Include="I\Examples\GenderType.cs" />
+    <Compile Include="I\Examples\QuebecLetterGrade.cs" />
+    <Compile Include="I\Examples\Coin.cs" />
     <Compile Include="J\Examples\Aggregator.cs" />
     <Compile Include="K\Examples\ClassList.cs" />
     <Compile Include="O\CSVFileIO.cs" />
@@ -140,7 +147,6 @@
     <Folder Include="F\Practice\" />
     <Folder Include="G\Practice\" />
     <Folder Include="H\Practice\" />
-    <Folder Include="I\Examples\" />
     <Folder Include="I\Practice\" />
     <Folder Include="J\Practice\" />
     <Folder Include="K\Practice\" />
