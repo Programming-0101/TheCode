@@ -1,35 +1,47 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Topic.E.Practice
 {
-    public class Calculator
+    public class Fraction
     {
-        public static int Add(int firstNumber, int secondNumber)
+        public int Numerator { get; private set; }
+
+        public int Denominator { get; private set; }
+
+        public Fraction(int numerator, int denominator)
         {
-            return firstNumber + secondNumber;
+            Numerator = numerator;
+            Denominator = denominator;
         }
 
-        public static int Multiply(int firstNumber, int secondNumber)
+        public Fraction Reciprocal
         {
-            return firstNumber * secondNumber;
+            get { return new Fraction(Denominator, Numerator); }
         }
 
-        public static int Subtract(int firstNumber, int secondNumber)
+        public override string ToString()
         {
-            return firstNumber - secondNumber;
+            string stringValue = "";
+            stringValue += Numerator + "/" + Denominator;
+            return stringValue;
         }
 
-        public static int Divide(int firstNumber, int secondNumber)
+        public double ToDouble()
         {
-            return firstNumber / secondNumber;
+            // The casting of numerator to a double helps
+            // ensure that we don't lose any fractional
+            // portion due to integer division.
+            double value = (double)(Numerator) / Denominator;
+            return value;
+        }
+
+        public void multiplyBy(Fraction otherFraction)
+        {
+            Numerator = Numerator * otherFraction.Numerator;
+            Denominator = Denominator * otherFraction.Denominator;
         }
     }
-    // TODO: Gravity Calculator
-    // TODO: Currency Calculator
 }
 
 /*

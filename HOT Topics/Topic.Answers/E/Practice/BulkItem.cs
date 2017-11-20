@@ -1,35 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Topic.E.Practice
 {
-    public class Calculator
+    public class BulkItem
     {
-        public static int Add(int firstNumber, int secondNumber)
+        public double Cost { get; set; }
+        public int Quantity { get; private set; }
+        public double CostEach { get { return Cost / Quantity; } }
+        public BulkItem(double cost, int quantity)
         {
-            return firstNumber + secondNumber;
-        }
-
-        public static int Multiply(int firstNumber, int secondNumber)
-        {
-            return firstNumber * secondNumber;
-        }
-
-        public static int Subtract(int firstNumber, int secondNumber)
-        {
-            return firstNumber - secondNumber;
-        }
-
-        public static int Divide(int firstNumber, int secondNumber)
-        {
-            return firstNumber / secondNumber;
+            Cost = cost;
+            Quantity = quantity;
         }
     }
-    // TODO: Gravity Calculator
-    // TODO: Currency Calculator
 }
 
 /*

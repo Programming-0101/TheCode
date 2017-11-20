@@ -1,35 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Topic.E.Practice
 {
-    public class Calculator
+    public class Die
     {
-        public static int Add(int firstNumber, int secondNumber)
+        private static Random Rnd = new Random();
+        public int Sides { get; private set; }
+        public int FaceValue { get; private set; }
+        public Die(int sides)
         {
-            return firstNumber + secondNumber;
+            Sides = sides;
+            Roll();
         }
 
-        public static int Multiply(int firstNumber, int secondNumber)
+        public void Roll()
         {
-            return firstNumber * secondNumber;
-        }
-
-        public static int Subtract(int firstNumber, int secondNumber)
-        {
-            return firstNumber - secondNumber;
-        }
-
-        public static int Divide(int firstNumber, int secondNumber)
-        {
-            return firstNumber / secondNumber;
+            FaceValue = Rnd.Next(1, Sides + 1);
         }
     }
-    // TODO: Gravity Calculator
-    // TODO: Currency Calculator
 }
 
 /*

@@ -1,35 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Topic.E.Practice
 {
-    public class Calculator
+    public class Cylinder
     {
-        public static int Add(int firstNumber, int secondNumber)
-        {
-            return firstNumber + secondNumber;
-        }
+        public double Radius { get; set; }
+        public double Height { get; set; }
+        public double SurfaceArea
+        { get { return 2 * Math.PI * Radius * Radius + 2 * Math.PI * Radius * Height; } }
+        public double Volume
+        { get { return Math.PI * Radius * Radius * Height; } }
 
-        public static int Multiply(int firstNumber, int secondNumber)
+        public Cylinder(double radius, double height)
         {
-            return firstNumber * secondNumber;
-        }
-
-        public static int Subtract(int firstNumber, int secondNumber)
-        {
-            return firstNumber - secondNumber;
-        }
-
-        public static int Divide(int firstNumber, int secondNumber)
-        {
-            return firstNumber / secondNumber;
+            Radius = radius;
+            Height = height;
         }
     }
-    // TODO: Gravity Calculator
-    // TODO: Currency Calculator
 }
 
 /*

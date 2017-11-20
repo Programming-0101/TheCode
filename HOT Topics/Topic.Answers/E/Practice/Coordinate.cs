@@ -1,35 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Topic.E.Practice
 {
-    public class Calculator
+    public class Coordinate
     {
-        public static int Add(int firstNumber, int secondNumber)
+        public string Type { get; private set; }
+        public double Value { get; private set; }
+        public int Degrees { get; private set; }
+        public int Minutes { get; private set; }
+        public int Seconds { get; private set; }
+        public Coordinate(string type, double value)
         {
-            return firstNumber + secondNumber;
+            Type = type;
+            Value = value;
+            // TODO: Calculate Degrees/Minutes/Seconds
         }
-
-        public static int Multiply(int firstNumber, int secondNumber)
+        public Coordinate(string type, int degrees, int minutes, int seconds)
         {
-            return firstNumber * secondNumber;
-        }
-
-        public static int Subtract(int firstNumber, int secondNumber)
-        {
-            return firstNumber - secondNumber;
-        }
-
-        public static int Divide(int firstNumber, int secondNumber)
-        {
-            return firstNumber / secondNumber;
+            Type = type;
+            Degrees = degrees;
+            Minutes = minutes;
+            Seconds = seconds;
+            // TODO: Calculate Value (from Degrees/Minutes/Seconds)
         }
     }
-    // TODO: Gravity Calculator
-    // TODO: Currency Calculator
 }
 
 /*

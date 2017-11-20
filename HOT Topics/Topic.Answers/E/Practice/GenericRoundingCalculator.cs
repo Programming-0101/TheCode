@@ -1,35 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Topic.E.Practice
 {
-    public class Calculator
+    public class GenericRoundingCalculator
     {
-        public static int Add(int firstNumber, int secondNumber)
+        public static int ToNearestWhole(double valueToRound, int factorOfTen)
         {
-            return firstNumber + secondNumber;
+            int result = (int)(valueToRound / (int)(Math.Pow(10, factorOfTen))) * (int)(Math.Pow(10, factorOfTen));
+            return result;
         }
-
-        public static int Multiply(int firstNumber, int secondNumber)
+        public static double ToNearestTenth(double valueToRound, int digitsPrecision)
         {
-            return firstNumber * secondNumber;
-        }
-
-        public static int Subtract(int firstNumber, int secondNumber)
-        {
-            return firstNumber - secondNumber;
-        }
-
-        public static int Divide(int firstNumber, int secondNumber)
-        {
-            return firstNumber / secondNumber;
+            double result = (int)(valueToRound * Math.Pow(10, digitsPrecision)) / Math.Pow(10, digitsPrecision);
+            return result;
         }
     }
-    // TODO: Gravity Calculator
-    // TODO: Currency Calculator
 }
 
 /*

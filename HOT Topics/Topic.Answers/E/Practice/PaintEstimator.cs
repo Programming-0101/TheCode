@@ -1,35 +1,52 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Topic.E.Practice
 {
-    public class Calculator
+    public class PaintEstimator
     {
-        public static int Add(int firstNumber, int secondNumber)
+        public double RoomHeight { get; set; }
+        public double RoomWidth { get; set; }
+        public double RoomLength { get; set; }
+        public double WindowHeight { get; set; }
+        public double WindowWidth { get; set; }
+        public const double COVERAGE = 8.0;
+        public int PaintCans
         {
-            return firstNumber + secondNumber;
+            get
+            {
+                int cans = (int)Math.Ceiling(SurfaceArea / COVERAGE);
+                return cans;
+            }
+        }
+        public double SurfaceArea
+        {
+            get
+            {
+                // Walls only
+                double area = RoomHeight * RoomWidth * 2
+                            + RoomHeight * RoomLength * 2
+                            - WindowHeight * WindowWidth;
+                return area;
+            }
         }
 
-        public static int Multiply(int firstNumber, int secondNumber)
+        public PaintEstimator(double roomHeight, double roomWidth, double roomLength)
         {
-            return firstNumber * secondNumber;
+            RoomHeight = roomHeight;
+            RoomWidth = roomWidth;
+            RoomLength = roomLength;
         }
 
-        public static int Subtract(int firstNumber, int secondNumber)
+        public PaintEstimator(double roomHeight, double roomWidth, double roomLength, double windowHeight, double windowWidth)
         {
-            return firstNumber - secondNumber;
-        }
-
-        public static int Divide(int firstNumber, int secondNumber)
-        {
-            return firstNumber / secondNumber;
+            RoomHeight = roomHeight;
+            RoomWidth = roomWidth;
+            RoomLength = roomLength;
+            WindowHeight = windowHeight;
+            WindowWidth = windowWidth;
         }
     }
-    // TODO: Gravity Calculator
-    // TODO: Currency Calculator
 }
 
 /*

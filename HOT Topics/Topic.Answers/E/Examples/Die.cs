@@ -5,7 +5,7 @@ namespace Topic.E.Examples
 {
     public class Die
     {
-        private static Random rnd = new Random();
+        private static Random Rnd = new Random();
 
         public Die()
         {
@@ -16,7 +16,7 @@ namespace Topic.E.Examples
 
         public void Roll()
         {
-            FaceValue = rnd.Next(6000) % 6 + 1;
+            FaceValue = Rnd.Next(1, 7);
         }
     }
 }

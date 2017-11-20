@@ -56,7 +56,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="D\Examples\Account.cs" />
+    <Compile Include="D\Examples\Company.cs" />
+    <Compile Include="D\Examples\Employee.cs" />
     <Compile Include="D\Examples\Person.cs" />
+    <Compile Include="D\Examples\Student.cs" />
+    <Compile Include="D\Practice\CanadianAddress.cs" />
+    <Compile Include="D\Practice\Course.cs" />
+    <Compile Include="D\Practice\ExamResult.cs" />
+    <Compile Include="D\Practice\LabResult.cs" />
+    <Compile Include="D\Practice\Person.cs" />
     <Compile Include="E\Examples\Account.cs" />
     <Compile Include="E\Examples\Angle.cs" />
     <Compile Include="E\Examples\Calculator.cs" />
@@ -70,8 +79,19 @@
     <Compile Include="E\Examples\ResolveExpressions.cs" />
     <Compile Include="E\Examples\Square.cs" />
     <Compile Include="E\Examples\StockItem.cs" />
+    <Compile Include="E\Practice\BulkItem.cs" />
     <Compile Include="E\Practice\Calculator.cs" />
+    <Compile Include="E\Practice\Cone.cs" />
+    <Compile Include="E\Practice\Coordinate.cs" />
+    <Compile Include="E\Practice\Cylinder.cs" />
+    <Compile Include="E\Practice\Die.cs" />
+    <Compile Include="E\Practice\Fraction.cs" />
+    <Compile Include="E\Practice\GenericRoundingCalculator.cs" />
+    <Compile Include="E\Practice\PaintEstimator.cs" />
+    <Compile Include="E\Practice\RoundingCalculator.cs" />
+    <Compile Include="E\Practice\ScoreCard.cs" />
     <Compile Include="E\Practice\Specs\E1_Calculator.cs" />
+    <Compile Include="E\Practice\Square.cs" />
     <Compile Include="E\_SelfCheck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -88,7 +108,6 @@
     <Analyzer Include="..\packages\xunit.analyzers.0.7.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="D\Practice\" />
     <Folder Include="F\Examples\" />
     <Folder Include="F\Practice\" />
     <Folder Include="G\Examples\" />

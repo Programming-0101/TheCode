@@ -1,35 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Topic.E.Practice
 {
-    public class Calculator
+    public class Cone
     {
-        public static int Add(int firstNumber, int secondNumber)
-        {
-            return firstNumber + secondNumber;
-        }
+        public double Radius { get; set; }
+        public double Height { get; set; }
+        public double SurfaceArea
+        { get { return Math.PI * Radius * Radius + Math.PI * Radius * SlantHeight; } }
+        private double SlantHeight
+        { get { return Math.Sqrt(Radius * Radius + Height * Height); } }
+        public double Volume
+        { get { return (1.0 / 3) * Math.PI * Radius * Radius * Height; } }
 
-        public static int Multiply(int firstNumber, int secondNumber)
+        public Cone(double radius, double height)
         {
-            return firstNumber * secondNumber;
-        }
-
-        public static int Subtract(int firstNumber, int secondNumber)
-        {
-            return firstNumber - secondNumber;
-        }
-
-        public static int Divide(int firstNumber, int secondNumber)
-        {
-            return firstNumber / secondNumber;
+            Radius = radius;
+            Height = height;
         }
     }
-    // TODO: Gravity Calculator
-    // TODO: Currency Calculator
 }
 
 /*

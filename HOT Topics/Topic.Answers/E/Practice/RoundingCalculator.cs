@@ -1,35 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Topic.E.Practice
 {
-    public class Calculator
+    public class RoundingCalculator
     {
-        public static int Add(int firstNumber, int secondNumber)
+        public static int ToNearestThousand(double value)
         {
-            return firstNumber + secondNumber;
+            int result = (int)(value / 1000) * 1000;
+            return result;
         }
-
-        public static int Multiply(int firstNumber, int secondNumber)
+        public static int ToNearestHundred(double value)
         {
-            return firstNumber * secondNumber;
+            int result = (int)(value / 100) * 100;
+            return result;
         }
-
-        public static int Subtract(int firstNumber, int secondNumber)
+        public static int ToNearestTen(double value)
         {
-            return firstNumber - secondNumber;
+            int result = (int)(value / 10) * 10;
+            return result;
         }
-
-        public static int Divide(int firstNumber, int secondNumber)
+        public static int ToNearestOne(double value)
         {
-            return firstNumber / secondNumber;
+            return (int)value;
+        }
+        public static double ToNearestTenth(double value)
+        {
+            double result = (int)(value * 10) / 10.0;
+            return result;
+        }
+        public static double ToNearestHundredth(double value)
+        {
+            double result = (int)(value * 10) / 100.0;
+            return result;
         }
     }
-    // TODO: Gravity Calculator
-    // TODO: Currency Calculator
 }
 
 /*

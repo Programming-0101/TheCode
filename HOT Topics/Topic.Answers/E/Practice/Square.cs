@@ -1,35 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Topic.E.Practice
 {
-    public class Calculator
+    public class Square
     {
-        public static int Add(int firstNumber, int secondNumber)
+        public Square(double side)
         {
-            return firstNumber + secondNumber;
+            this.Side = side;
         }
 
-        public static int Multiply(int firstNumber, int secondNumber)
+        public double Side { get; set; }
+
+        public double Area
         {
-            return firstNumber * secondNumber;
+            get { return Side * Side; }
         }
 
-        public static int Subtract(int firstNumber, int secondNumber)
+        public double Perimeter
         {
-            return firstNumber - secondNumber;
+            get { return Side * 4; }
         }
 
-        public static int Divide(int firstNumber, int secondNumber)
+        public double Diagonal
         {
-            return firstNumber / secondNumber;
+            get { return Math.Sqrt(2 * Side * Side); }
         }
     }
-    // TODO: Gravity Calculator
-    // TODO: Currency Calculator
 }
 
 /*

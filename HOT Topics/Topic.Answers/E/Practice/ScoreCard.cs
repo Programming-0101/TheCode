@@ -1,35 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Topic.E.Practice
 {
-    public class Calculator
+    public class ScoreCard
     {
-        public static int Add(int firstNumber, int secondNumber)
-        {
-            return firstNumber + secondNumber;
-        }
-
-        public static int Multiply(int firstNumber, int secondNumber)
-        {
-            return firstNumber * secondNumber;
-        }
-
-        public static int Subtract(int firstNumber, int secondNumber)
-        {
-            return firstNumber - secondNumber;
-        }
-
-        public static int Divide(int firstNumber, int secondNumber)
-        {
-            return firstNumber / secondNumber;
-        }
+        // TODO: Design ScoreCard
+        // This class represents a scorecard for tracking bowling scores frame by frame. It produces a final tally for the game, as well as the current score and the current frame.
     }
-    // TODO: Gravity Calculator
-    // TODO: Currency Calculator
 }
 
 /*
