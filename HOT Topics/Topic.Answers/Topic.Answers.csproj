@@ -93,6 +93,22 @@
     <Compile Include="E\Practice\Specs\E1_Calculator.cs" />
     <Compile Include="E\Practice\Square.cs" />
     <Compile Include="E\_SelfCheck.cs" />
+    <Compile Include="F\Examples\Account.cs" />
+    <Compile Include="F\Examples\Angle.cs" />
+    <Compile Include="F\Examples\Color.cs" />
+    <Compile Include="F\Examples\Fraction.cs" />
+    <Compile Include="F\Examples\MemoryAddress.cs" />
+    <Compile Include="F\Examples\Person.cs" />
+    <Compile Include="F\Examples\StockItem.cs" />
+    <Compile Include="G\Examples\Circle.cs" />
+    <Compile Include="G\Examples\Die.cs" />
+    <Compile Include="G\Examples\Person.cs" />
+    <Compile Include="G\Examples\Square.cs" />
+    <Compile Include="G\Examples\Student.cs" />
+    <Compile Include="H\Examples\LetterGrade.cs" />
+    <Compile Include="H\Examples\Rating.cs" />
+    <Compile Include="J\Examples\Aggregator.cs" />
+    <Compile Include="K\Examples\ClassList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -108,16 +124,13 @@
     <Analyzer Include="..\packages\xunit.analyzers.0.7.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="F\Examples\" />
     <Folder Include="F\Practice\" />
-    <Folder Include="G\Examples\" />
     <Folder Include="G\Practice\" />
-    <Folder Include="H\Examples\" />
     <Folder Include="H\Practice\" />
     <Folder Include="I\Examples\" />
     <Folder Include="I\Practice\" />
-    <Folder Include="J\Examples\" />
     <Folder Include="J\Practice\" />
+    <Folder Include="K\Practice\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />

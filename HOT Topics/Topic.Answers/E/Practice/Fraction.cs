@@ -36,7 +36,7 @@ namespace Topic.E.Practice
             return value;
         }
 
-        public void multiplyBy(Fraction otherFraction)
+        public void MultiplyBy(Fraction otherFraction)
         {
             Numerator = Numerator * otherFraction.Numerator;
             Denominator = Denominator * otherFraction.Denominator;

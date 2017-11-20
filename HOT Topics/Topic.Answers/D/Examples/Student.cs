@@ -22,7 +22,7 @@ namespace Topic.D.Examples
         }
         public override string ToString()
         {
-            return $"{Name} ({StudentId})";
+            return $"({StudentId}) {Name}";
         }
     }
 }
