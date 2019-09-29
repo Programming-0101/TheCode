@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Linq;
-using Xunit;
 using System.Reflection;
-using System.Collections.Generic;
+using Xunit;
 
 namespace Topic.Specs
 {

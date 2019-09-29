@@ -43,34 +43,6 @@ namespace Topic.E.Examples.Specs
         }
         #endregion
     }
-    public abstract class E10_StockItem<TSUT> : ReflectionBase<TSUT>
-    {
-        //Should get and set the name, cost and profit margin of the stock item
-        //Should represent the profit margin as a percent; a value of 45 means 45%
-        //Should calculate the price of the item, to the nearest cent
-        //Use the rounding where values under a half-cent are rounded down and values greater than or equal to a half-cent are rounded up
-        private dynamic New(string first, string last, DateTime dob)
-        {
-            return NewSUT(first, last, dob);
-        }
-
-        #region From earlier topics
-        [Theory, Trait("Prior Tests", "Person - Example")]
-        [InlineData("John")]
-        [InlineData("Jane")]
-        public void Should_Get_FirstName(string firstName)
-        {
-            // Arrange
-            var sut = New(firstName, "Doe", new DateTime(1990, 05, 30));
-
-            // Act
-            string actual = sut.FirstName;
-
-            // Assert
-            Assert.Equal(firstName, actual);
-        }
-        #endregion
-    }
     public abstract class E11_Die<TSUT> : ReflectionBase<TSUT>
     {
         // TODO: Need to figure out a way to test "random numbers"....

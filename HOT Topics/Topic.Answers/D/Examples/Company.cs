@@ -10,7 +10,11 @@ namespace Topic.D.Examples
         public bool IsIncorporated { get; set; }
         public DateTime BusinessStartDate { get; set; }
         public double GrossIncomeToDate { get; set; }
-        public Company(string name, string city, bool isIncorporated, DateTime businessStartDate, double grossIncomeToDate)
+        public Company(string name, 
+                       string city, 
+                       bool isIncorporated, 
+                       DateTime businessStartDate, 
+                       double grossIncomeToDate)
         {
             Name = name;
             City = city;
