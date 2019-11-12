@@ -115,7 +115,14 @@
     <Compile Include="I\Examples\QuebecLetterGrade.cs" />
     <Compile Include="I\Examples\Coin.cs" />
     <Compile Include="J\Examples\Aggregator.cs" />
+    <Compile Include="J\Examples\Fraction.cs" />
+    <Compile Include="J\Examples\GuessingGame.cs" />
+    <Compile Include="J\Examples\Math.cs" />
+    <Compile Include="J\Examples\Numbers.cs" />
+    <Compile Include="J\Examples\SecretNumber.cs" />
     <Compile Include="K\Examples\ClassList.cs" />
+    <Compile Include="K\Examples\Math.cs" />
+    <Compile Include="K\Examples\Student.cs" />
     <Compile Include="O\CSVFileIO.cs" />
     <Compile Include="O\Examples\BookFileAdapter.cs" />
     <Compile Include="O\Examples\PhoneNumberFileAdapter.cs" />
@@ -134,6 +141,7 @@
     <Compile Include="Q\Examples\PersonSwap.cs" />
     <Compile Include="Q\Examples\Swapping.cs" />
     <Compile Include="T\Examples\Hand.cs" />
+    <Compile Include="T\Examples\SISystem.cs" />
     <Compile Include="T\Examples\TotalExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
