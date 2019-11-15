@@ -121,8 +121,14 @@
     <Compile Include="J\Examples\Numbers.cs" />
     <Compile Include="J\Examples\SecretNumber.cs" />
     <Compile Include="K\Examples\ClassList.cs" />
+    <Compile Include="K\Examples\Mark.cs" />
     <Compile Include="K\Examples\Math.cs" />
+    <Compile Include="K\Examples\MultipleChoice.cs" />
+    <Compile Include="K\Examples\MultipleChoiceMarker.cs" />
+    <Compile Include="K\Examples\PhoneBook.cs" />
+    <Compile Include="K\Examples\PhoneNumber.cs" />
     <Compile Include="K\Examples\Student.cs" />
+    <Compile Include="M\Examples\End.cs" />
     <Compile Include="O\CSVFileIO.cs" />
     <Compile Include="O\Examples\BookFileAdapter.cs" />
     <Compile Include="O\Examples\PhoneNumberFileAdapter.cs" />
